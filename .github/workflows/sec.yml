@@ -1,6 +1,6 @@
 name: Greeting on variable day
 on:
-  push
+  workflow_dispatch:
 env:
   DAY_OF_WEEK: Monday
 
@@ -14,31 +14,3 @@ jobs:
         run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
         env:
           First_Name: Mona
-
----
-name: CI
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: Run a one-line script
-        run: echo Hello, world!
-        if: github.event_name == 'push'
-
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project
-          hostname
-          sleep 10
-      - name: Create a file
-        run: touch /tmp/gagandeep1
----        
-
