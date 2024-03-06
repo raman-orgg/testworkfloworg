@@ -16,9 +16,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: output-artifact
-          path: .
-          repository: ramannkhanna2/testworkflow
-          run-id: ${{ needs.Upload_Artifact_Job.outputs.run-id }}
+          path: outputfolder
 
       - name: Display content of the downloaded file
         run: cat output.txt
