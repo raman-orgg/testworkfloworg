@@ -1,4 +1,4 @@
-name: Upload Artifact Workflow
+name: Upload/download Artifact 
 
 on: [workflow_dispatch]
 
@@ -16,8 +16,8 @@ jobs:
         with:
           name: output-artifact
           path: outputfolder/output.txt
-          
-   download-artifact:
+
+  download-artifact:
     name: Download Artifact and Display
     runs-on: ubuntu-latest
     steps:
