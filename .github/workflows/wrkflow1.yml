@@ -8,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: create output dir
+        run: mkdir outputfolder
       - name: Create output file
         run: echo "Hello, this is some important information." > outputfolder/output.txt
 
