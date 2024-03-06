@@ -9,7 +9,7 @@ jobs:
 
     steps:
       - name: Create output file
-        run: echo "Hello, this is some important information." > output.txt
+        run: echo "Hello, this is some important information." > outputfolder/output.txt
 
       - name: Upload output file
         uses: actions/upload-artifact@v4
