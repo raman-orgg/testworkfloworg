@@ -1,0 +1,18 @@
+name: Upload Artifact Workflow
+
+on: [workflow_dispatch]
+
+jobs:
+  create-artifact:
+    name: Create Artifact
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Create output file
+        run: echo "Hello, this is some important information." > output.txt
+
+      - name: Upload output file
+        uses: actions/upload-artifact@v4
+        with:
+          name: output-artifact
+          path: output.txt
