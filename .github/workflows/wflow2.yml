@@ -1,13 +1,21 @@
-name: learn-github-actions
-run-name: ${{ github.actor }} is learning GitHub Actions
+name: Download Artifact Workflow
+
 on: [workflow_dispatch]
+#  workflow_run:
+#    workflows: ["Upload Artifact Workflow"]
+#    types:
+#      - completed
+
 jobs:
-  check-bats-version:
+  download-artifact:
+    name: Download Artifact and Display
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Download the artifact
+        uses: actions/download-artifact@v4
         with:
-          node-version: '14'
-      - run: npm install -g bats
-      - run: bats -v
+          name: output-artifact
+
+      - name: Display content of the downloaded file
+        run: cat output.txt
