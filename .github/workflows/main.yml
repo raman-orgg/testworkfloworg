@@ -1,0 +1,17 @@
+name: starterwrkflow
+
+on:
+  push:
+    branches:
+    - main
+
+
+jobs:
+  myjob:
+    name: display info
+    runs-on: ubuntu-latest
+    steps:
+    - name: task1
+      run: uname-a
+    - name: task2
+      run: hostname
