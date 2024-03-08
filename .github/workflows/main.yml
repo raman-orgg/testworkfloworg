@@ -12,6 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: task1
-      run: uname-a
+      run: uname -a
     - name: task2
       run: hostname
