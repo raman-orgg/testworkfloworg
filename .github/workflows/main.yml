@@ -1,14 +1,12 @@
 name: starterwrkflow
 
 on:
-  push:
-    branches:
-    - main
+  workflow_dispatch:
     
 
 jobs:
   build-job:
-    name: display info
+    name: on self hosted
     runs-on: raman-runner
     steps:
     - name: task1
@@ -23,7 +21,7 @@ jobs:
       run: echo "build job completed"
 
   test-job:
-    name: display info
+    name: on github hosted
     runs-on: ubuntu-latest
     steps:
     - name: task1
