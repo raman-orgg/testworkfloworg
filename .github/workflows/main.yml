@@ -8,7 +8,7 @@ on:
 
 
 jobs:
-  myjob:
+  build-job:
     name: display info
     runs-on: ubuntu-latest
     steps:
@@ -16,3 +16,19 @@ jobs:
       run: uname -a
     - name: task2
       run: hostname
+    - name: task3
+      run: sleep 5
+    - name: build job completed
+
+  test-job:
+    name: display info
+    runs-on: ubuntu-latest
+    steps:
+    - name: task1
+      run: uname -a
+    - name: task2
+      run: hostname
+    - name: task3
+      run: sleep 5
+    - name: test job completed
+
