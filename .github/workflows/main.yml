@@ -16,7 +16,10 @@ jobs:
     - name: task3
       run: sleep 5
     - name: task4
-      run: touch /tmp/ramankhannatest
+      run: |
+        touch /tmp/ramankhannatest
+        echo "hi from remote" > /tmp/ramankhannatest
+      
     - name: build job status
       run: echo "build job completed"
 
