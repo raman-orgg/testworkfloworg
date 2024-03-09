@@ -7,7 +7,7 @@ on:
 jobs:
   build-job:
     name: on self hosted
-    runs-on: raman-runner
+    runs-on: raman-test
     steps:
     - name: task1
       run: uname -a
