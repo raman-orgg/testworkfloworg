@@ -16,7 +16,7 @@ jobs:
     - name: task3
       run: sleep 5
     - name: task4
-      run: touch /ramankhanna/testfile
+      run: touch /tmp/ramankhannatest
     - name: build job status
       run: echo "build job completed"
 
