@@ -28,12 +28,16 @@ jobs:
         java -version 
         
   test:
+    env: 
+      user2: gaganjob2
     name: 2nd stage
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
       uses: actions/checkout@v4.1.1
     - name: step2
+      env:
+        user3: sandeepstep2
       run: |
         ls -ltr
         echo " repo name is ${{ GITHUB.REPOSITORY }} and runner name is ${{ RUNNER.NAME }} "
