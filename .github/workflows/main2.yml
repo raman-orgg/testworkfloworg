@@ -1,9 +1,8 @@
 name: workflow2
-on: 
-  # push:
-  #   branches:
-  #   - main
-  workflow_dispatch:
+on:
+  push:
+    branches:
+    - main
 env:
   user1: ramanenv
   
@@ -24,8 +23,9 @@ jobs:
         ls -ltr
         echo " repo name is ${{ GITHUB.REPOSITORY }} and runner name is ${{ RUNNER.NAME }} "
         echo " value of user1,2,3 are  $user1 , $user2 , $user3 "
+        echo " value of repouser is ${{ vars.user1 }} and server name is ${{ vars.servername }}
         pwd
-        java -version 
+        java -version
         
   test:
     env: 
@@ -44,6 +44,7 @@ jobs:
         echo " value of user1,2,3 are $user1 , $user2 , $user3 "
         pwd
         java -version   
+        
     - name: print stage
       run: echo " value of user1,2,3 are  $user1 , $user2 , $user3 "
         
