@@ -1,7 +1,9 @@
 name: starterwrkflow
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+    - main
     
 
 jobs:
@@ -20,6 +22,8 @@ jobs:
         touch /tmp/ramankhannatest
         echo "hi from remote" > /tmp/ramankhannatest
         echo " value of repouser is ${{ vars.user1 }} and server name is ${{ vars.servername }}
+        echo " $user1 "
+        
       
     - name: build job status
       run: echo "build job completed"
