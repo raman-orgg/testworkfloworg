@@ -1,0 +1,22 @@
+name: workflow2
+on: 
+  push:
+    branches:
+    - main
+
+jobs:
+  build:
+    name: checkout stage
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4.1.1
+    - name: step2
+      run: |
+        ls -ltr
+        echo " repo name is ${{ GITHUB_REPOSITORY }} and runner name is ${{ RUNNER_NAME }}
+        pwd
+        java -version
+        
+        
+    
