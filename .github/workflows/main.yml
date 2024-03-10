@@ -21,7 +21,7 @@ jobs:
       run: |
         touch /tmp/ramankhannatest
         echo "hi from remote" > /tmp/ramankhannatest
-        echo " value of repouser is ${{ vars.user1 }} and server name is ${{ vars.servername }}
+        echo " value of repouser is ${{ vars.user1 }} and server name is ${{ vars.servername }} "
         echo " $user1 "
         
       
