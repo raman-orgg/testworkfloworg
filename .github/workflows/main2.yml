@@ -23,7 +23,7 @@ jobs:
         ls -ltr
         echo " repo name is ${{ GITHUB.REPOSITORY }} and runner name is ${{ RUNNER.NAME }} "
         echo " value of user1,2,3 are  $user1 , $user2 , $user3 "
-        echo " value of repouser is ${{ vars.user1 }} and server name is ${{ vars.servername }}
+        echo " value of repouser is ${{ vars.user1 }} and server name is ${{ vars.servername }} "
         pwd
         java -version
         
