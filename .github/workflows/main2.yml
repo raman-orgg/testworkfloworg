@@ -41,6 +41,6 @@ jobs:
         pwd
         java -version   
     - name: test stage
-      run: echo " value of user1,2,3 are : $user1 , $user2 , $user3
+      run: echo " value of user1,2,3 are : $user1 , $user2 , $user3 "
         
     
