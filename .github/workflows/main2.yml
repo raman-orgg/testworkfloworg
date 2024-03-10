@@ -1,12 +1,33 @@
 name: workflow2
 on: 
-  push:
-    branches:
-    - main
+  # push:
+  #   branches:
+  #   - main
+  workflow_dispatch:
+env:
+  user1: ramanenv
+  
 
 jobs:
   build:
-    name: checkout stage
+    env: 
+      user2: gaganjob
+    name: 1st stage
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4.1.1
+    - name: step2
+      env:
+        user3: sandeepstep
+      run: |
+        ls -ltr
+        echo " repo name is ${{ GITHUB.REPOSITORY }} and runner name is ${{ RUNNER.NAME }} "
+        pwd
+        java -version 
+        
+  test:
+    name: 2nd stage
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
@@ -16,7 +37,5 @@ jobs:
         ls -ltr
         echo " repo name is ${{ GITHUB.REPOSITORY }} and runner name is ${{ RUNNER.NAME }} "
         pwd
-        java -version
-        
-        
+        java -version      
     
