@@ -9,7 +9,7 @@ on:
 jobs:
   build-job:
     name: on self hosted
-    runs-on: raman-test
+    runs-on: ubuntu-latest
     steps:
     - name: task1
       run: uname -a
